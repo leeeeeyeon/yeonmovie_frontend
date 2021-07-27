@@ -6,17 +6,15 @@ import "./Home.css";
 class Home extends React.Component{
   state = {
     isLoading: true,
-    movies: []
+    results: []
   };
 
   getMovies = async () => {
     const {
       data: 
-        {
-          data: {movies}
-        }
-      } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
-      this.setState({movies, isLoading: false});
+        {results}
+      } = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=1852606297d2c301e19c3b9348b8a4e6");
+    this.setState({results, isLoading: false});
   }
 
   async componentDidMount(){
@@ -24,7 +22,8 @@ class Home extends React.Component{
   }
 
   render(){
-    const { isLoading, movies } = this.state;
+    const { isLoading, results } = this.state;
+
     return (
     <section className="container">
       {isLoading ? // 삼항 연산자, ':'을 기준으로 구분
@@ -33,15 +32,15 @@ class Home extends React.Component{
       </div> 
       :
       <div className="movies">
-        {movies.map(movie => (
+        {results.map(movie => (
           <Movie
           key={movie.id}
           id={movie.id}
-          year={movie.year}
+          release_date={movie.release_date}
           title={movie.title}
-          summary={movie.summary}
-          poster={movie.medium_cover_image}
-          genres={movie.genres}
+          overview={movie.overview}
+          poster={movie.poster_path}
+          genres={movie.genre_ids}
           />
         ))}
       </div>
