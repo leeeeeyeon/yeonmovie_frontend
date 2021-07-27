@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/yeonmovie_frontend/static/css/main.39197211.chunk.css",
-    "main.js": "/yeonmovie_frontend/static/js/main.5dea4af7.chunk.js",
-    "main.js.map": "/yeonmovie_frontend/static/js/main.5dea4af7.chunk.js.map",
+    "main.css": "/yeonmovie_frontend/static/css/main.eba733b4.chunk.css",
+    "main.js": "/yeonmovie_frontend/static/js/main.cac5e3ef.chunk.js",
+    "main.js.map": "/yeonmovie_frontend/static/js/main.cac5e3ef.chunk.js.map",
     "runtime-main.js": "/yeonmovie_frontend/static/js/runtime-main.e2db72e0.js",
     "runtime-main.js.map": "/yeonmovie_frontend/static/js/runtime-main.e2db72e0.js.map",
     "static/js/2.cf5b59cd.chunk.js": "/yeonmovie_frontend/static/js/2.cf5b59cd.chunk.js",
     "static/js/2.cf5b59cd.chunk.js.map": "/yeonmovie_frontend/static/js/2.cf5b59cd.chunk.js.map",
     "index.html": "/yeonmovie_frontend/index.html",
-    "static/css/main.39197211.chunk.css.map": "/yeonmovie_frontend/static/css/main.39197211.chunk.css.map",
+    "static/css/main.eba733b4.chunk.css.map": "/yeonmovie_frontend/static/css/main.eba733b4.chunk.css.map",
     "static/js/2.cf5b59cd.chunk.js.LICENSE.txt": "/yeonmovie_frontend/static/js/2.cf5b59cd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e2db72e0.js",
     "static/js/2.cf5b59cd.chunk.js",
-    "static/css/main.39197211.chunk.css",
-    "static/js/main.5dea4af7.chunk.js"
+    "static/css/main.eba733b4.chunk.css",
+    "static/js/main.cac5e3ef.chunk.js"
   ]
 }
