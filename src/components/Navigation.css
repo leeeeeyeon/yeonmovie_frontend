@@ -22,6 +22,7 @@
   @media screen and (max-width: 1090px) {
     .menu{
       display: block;
+      position: fixed;
     }
     .nav{
       left: initial;
