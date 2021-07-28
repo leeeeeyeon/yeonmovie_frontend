@@ -10,12 +10,3 @@
     max-width: 400px;
     font-weight: 300;
   }
-  
-  .detail__container span:first-child {
-    font-size: 20px;
-  }
-  
-  .detail__container span:last-child {
-    display: block;
-    margin-top: 10px;
-  }

@@ -1,0 +1,60 @@
+.board__container {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 300;
+  }
+
+  .tbl{
+    margin: 10px auto 0px auto;
+  }
+
+  .tbl, .tbl th, .tbl td{
+    border: 1px solid gray;
+    border-width: 1px 0;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .tbl th{
+    background-color: #E8F6EF;
+    font-size: 1.1em;
+    color: black;
+    border-width: 2px 0;
+  }
+
+  .tbl td{
+    border-style: dotted;
+  }
+
+  .create{
+    background: #E8F6EF;
+    border-radius: 5px;
+    color: black;
+    margin: 1px;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  a:focus{
+    text-decoration: none;
+  }
+  a:hover, a:active{
+    text-decoration: none;
+  }
