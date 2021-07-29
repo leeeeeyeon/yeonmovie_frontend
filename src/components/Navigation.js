@@ -22,6 +22,7 @@ function Navigation(){
                 <Link to="/board">Community</Link>
                 <Link to="/auth/login">Login</Link>
                 <Link to="/auth/register">Register</Link>
+                <Link to="/api">API</Link>
                 </div>
                 :
                 <div></div>
@@ -34,6 +35,7 @@ function Navigation(){
                 <Link to="/board">Community</Link>
                 <Link to="/auth/login">Login</Link>
                 <Link to="/auth/register">Register</Link>
+                <Link to="/api">API</Link>
                 </div>   
                 )}
         </div>

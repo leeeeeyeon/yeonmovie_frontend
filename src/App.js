@@ -10,7 +10,10 @@ import Create from "./routes/board/Create";
 import Login from "./routes/user/Login";
 import Register from "./routes/user/Register";
 
+import Api from './routes/Api';
+
 import Navigation from './components/Navigation';
+
 import "./App.css";
 
 function App(){
@@ -26,6 +29,8 @@ function App(){
 
       <Route path="/auth/login" component={Login}/>
       <Route path="/auth/register" component={Register}/>
+
+      <Route path="/api" component={Api}/>
       
     </BrowserRouter>
   );
