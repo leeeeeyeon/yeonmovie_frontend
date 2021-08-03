@@ -11,11 +11,11 @@
     font-weight: 300;
   }
 
-  .tbl{
+.tbl{
     margin: 10px auto 0px auto;
   }
 
-  .tbl, .tbl th, .tbl td{
+.tbl, .tbl th, .tbl td{
     border: 1px solid gray;
     border-width: 1px 0;
     border-collapse: collapse;
@@ -23,18 +23,18 @@
     padding: 8px;
   }
 
-  .tbl th{
+.tbl th{
     background-color: #E8F6EF;
     font-size: 1.1em;
     color: black;
     border-width: 2px 0;
   }
 
-  .tbl td{
+.tbl td{
     border-style: dotted;
   }
 
-  .create{
+.create{
     background: #E8F6EF;
     border-radius: 5px;
     color: black;
@@ -42,19 +42,19 @@
     font-weight: 500;
   }
 
-  a {
+a {
     text-decoration: none;
     color: black;
   }
-  a:visited{
+a:visited{
     text-decoration: none;
   }
-  a:hover{
+a:hover{
     text-decoration: none;
   }
-  a:focus{
+a:focus{
     text-decoration: none;
   }
-  a:hover, a:active{
+a:hover, a:active{
     text-decoration: none;
   }

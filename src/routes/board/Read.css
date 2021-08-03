@@ -1,4 +1,4 @@
-.create__container {
+.read__container {
     box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
       0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
     padding: 20px;
@@ -10,3 +10,18 @@
     max-width: 400px;
     font-weight: 300;
   }
+
+.update, .delete{
+    background: #E8F6EF;
+    border-radius: 5px;
+    color: black;
+    margin: 1px;
+    margin-right: 10px;
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+  }
+
+.delete:hover{
+  background-color: #F6AE99;
+}

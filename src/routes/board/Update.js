@@ -1,50 +1,55 @@
-import React, { useState } from "react";
-import "./Create.css";
+import React, { useEffect, useState } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import "./Update.css";
 import axios from "axios";
 
-function Create(props){
-    const { history } = props;
+function Update(props){
+    const { location, history } = props;
 
     const [content, setContent] = useState({
-        title: '',
-        description: '',
-        date: ''
+        title: location.state.title,
+        description: ''
     });
 
-    const submitContent = () => {
-        axios.post('http://localhost:3002/board/create', {
+    const getValue = e => {
+        const {name, value} = e.target;
+        setContent({
+            ...content,
+            [name]: value,
+        });
+    }
+
+    const updateContent = () => {
+        axios.put('http://localhost:3002/board/update', {
+            id: location.state.id,
             title: content.title,
-            description: content.description,
-            date: content.date
+            description: content.description
         })
         .then(()=>{
-            alert('등록 완료!');
-            history.push("/board");
+            alert('수정 완료!');
+            history.push(`/board`);
+
         })
         .catch((err)=>{ console.log(err); });
     }
 
-    const getValue = e => {
-        const {name, value} = e.target;
-        let now = new Date();
-        let timeString = now.toLocaleString();
-        setContent({
-            ...content,
-            [name]: value,
-            date: timeString
-        });
-    }
+    useEffect(()=>{
+        if(location.state === undefined){
+            history.push("/board");
+        }
+    }, [location, history]);
 
     return (
-        <div className="create__container">
+        <div className="update__container">
             <h2>커뮤니티</h2>
-            <p><input type="text" name="title" placeholder="title" onChange={getValue}/></p>
+            <p><input type="text" name="title" placeholder="title"
+                value={content.title}
+                onChange={getValue}/></p>
             <div className="ckeditor">
                 <CKEditor
                 editor={ClassicEditor}
-                data='<p>Hello from CKEditor5!</p>'
+                data={location.state.description}
                 onReady={editor =>{
 
                 }}
@@ -55,7 +60,6 @@ function Create(props){
                         ...content,
                         description: data
                     });
-                    // console.log(content);
                 }}
                 onBlur={(event, editor) => {
                     // console.log('Blur', editor);
@@ -65,9 +69,9 @@ function Create(props){
                 }}
                 />                
             </div>
-            <p><input type="submit" value="글 작성" onClick={submitContent}/></p>
+            <p><input type="submit" value="글 수정" onClick={updateContent}/></p>
         </div>
     );
 }
 
-export default Create;
+export default Update;

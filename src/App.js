@@ -6,11 +6,13 @@ import Detail from "./routes/Detail";
 
 import Board from "./routes/board/Board";
 import Create from "./routes/board/Create";
+import Read from "./routes/board/Read";
+import Update from "./routes/board/Update";
 
 import Login from "./routes/user/Login";
 import Register from "./routes/user/Register";
 
-import Api from './routes/Api';
+import Api from "./routes/Api";
 
 import Navigation from './components/Navigation';
 
@@ -25,7 +27,9 @@ function App(){
       <Route path="/movie/:id" component={Detail}/>
 
       <Route path="/board" exact={true} component={Board}/>
-      <Route path="/board/create" component={Create}/>
+      <Route path="/board-create" component={Create}/>
+      <Route path="/board/:boardId" exact={true} component={Read}/>
+      <Route path="/board/update/:boardId" component={Update}/>
 
       <Route path="/auth/login" component={Login}/>
       <Route path="/auth/register" component={Register}/>
