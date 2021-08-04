@@ -7,12 +7,15 @@ function Board(){
 
     const [viewContent, setViewContent] = useState([]);
 
-    useEffect(()=>{
-        axios.get('http://localhost:3002/board')
-        .then((res) => {
-            setViewContent(res.data);
-        })
-        .catch((err)=> { console.log(err); });
+    useEffect( ()=>{
+        async function getContent(){
+            await axios.get('http://localhost:3002/board')
+            .then((res) => {
+                setViewContent(res.data[2]);
+            })
+            .catch((err)=> { console.log(err); });
+        }
+        getContent();
     }, []);
 
     return (
