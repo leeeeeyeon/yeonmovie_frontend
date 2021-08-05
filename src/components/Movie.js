@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "./Movie.css";
+import "./css/Movie.css";
 
 function Movie({id, release_date, title, overview, poster, genres}){
         const idList = [

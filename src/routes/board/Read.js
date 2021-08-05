@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactHtmlParser from 'react-html-parser';
 import axios from "axios";
-import "./Read.css";
+import "./css/Read.css";
 
 function Read(props){
     const { location, history } = props;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import "./Update.css";
+import "./css/Update.css";
 import axios from "axios";
 
 function Update(props){

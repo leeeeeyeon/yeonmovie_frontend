@@ -1,7 +1,12 @@
-import React from "react";
-import "./Login.css";
+import React, { useState } from "react";
+import "./css/Login.css";
 
 function Login(){
+    const [loginInfo, setLoginInfo] = useState({
+        id: '',
+        pwd: ''
+    });
+
     return (
         <div className="login__container">
             <h4>Login</h4>

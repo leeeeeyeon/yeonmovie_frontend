@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Create.css";
+import "./css/Create.css";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import axios from "axios";
