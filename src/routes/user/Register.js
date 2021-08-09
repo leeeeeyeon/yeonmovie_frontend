@@ -23,12 +23,16 @@ function Login(props){
             pwd2: user.pwd2
 
         })
-        .then(()=>{
-            alert('가입 완료!');
-            history.push("/");
+        .then((res)=>{
+            if(res.data) {
+                alert('가입 완료!');
+                history.push("/");
+            } else {
+                alert('비밀번호가 다릅니다. 다시 시도해주세요!');
+                history.push("/user/register");
+            }
         })
         .catch((err)=>{ console.log(err); });
-        ;
     }
 
     const getValue = e => {
